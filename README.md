@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://camo.githubusercontent.com/0d601c68ab4ee554491ffe2aa994f48e47ff6447f295e1a359a07fb9fb070a64/68747470733a2f2f332e62702e626c6f6773706f742e636f6d2f2d6a7779624b6a314d6e49552f57423676395448714b7a492f414141414141414149586b2f475030673553313643656f31505032353254325259704d674156684a6866544541434c63422f73313630302f435255442e706e67" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><img src="https://camo.githubusercontent.com/0d601c68ab4ee554491ffe2aa994f48e47ff6447f295e1a359a07fb9fb070a64/68747470733a2f2f332e62702e626c6f6773706f742e636f6d2f2d6a7779624b6a314d6e49552f57423676395448714b7a492f414141414141414149586b2f475030673553313643656f31505032353254325259704d674156684a6866544541434c63422f73313630302f435255442e706e67" width="400" alt="Laravel Logo"></p>
 
 ## About project
 
@@ -32,7 +32,7 @@ It's a simple API request/response `CRUD` application made with Laravel.
 
 ## Installation
 
-Your machine must have composer, php, xampp, git installed.
+Your machine must have composer, php, xampp, git, node installed.
 
 ### Step 1: Clone the repository/Download ZIP
 
@@ -42,12 +42,32 @@ https://github.com/rezabtuhin/laracrud.git
 
 ### Step 2: Navigate to the project directory in your desktop.
 
-### step 3: Open terminal and run these commands.
+### step 3: Open terminal and run these commands (Requires all command).
 
-```sh command 1
+```sh
 composer install
 ```
 
-```sh command 2
+```sh
 npm install
 ```
+
+```sh
+cp .env.example .env
+```
+
+Set up the database in the `.env` file. Then run-
+
+```sh
+php artisan key:generate
+```
+
+```sh
+php artisan migrate
+```
+
+```sh
+php artisan serve
+```
+
+<p align="center" style="font-weight: bold">Good luck 😃</p>
