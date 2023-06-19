@@ -24,9 +24,11 @@ It's a simple API request/response `CRUD` application made with Laravel.
 **Add products:** `name`, `slug`, `description`, `price` <br>
 **Update products:** `name`, `description`, `price` [Note: not all the field is required here]<br>
 
-## Laravel Sponsors
+## Postman configuration
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+[Download](https://www.postman.com/downloads/) and install the postman desktop application. Create a new collections then create a new global variable `token` for authorization. Initialize the variable with the token from the response of login. Now navigate to the api request window, search for `Authorization` tab; Select type `Bearer Token` and set the `token` in the Token field. **[NOTE: global variable `token` must be reinitialize with new token value from the response of login everytime after logout.]**
+
+-   Set Headers accept `application/json` and use `x-www-form-urlencoded` where needer for the convienience.
 
 ### Premium Partners
 
