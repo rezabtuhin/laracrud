@@ -8,8 +8,8 @@ It's a simple API request/response `CRUD` application made with Laravel.
 
 | Method | Name                 | API call       | Response                                    | Note                                   |
 | ------ | -------------------- | -------------- | ------------------------------------------- | -------------------------------------- |
-| POST   | User Registration    | api/register   | Success                                     | Requie json body                       |
-| POST   | Login                | api/login      | Authentication token                        | Requie json body                       |
+| POST   | User Registration    | api/register   | Success                                     | Require json body                      |
+| POST   | Login                | api/login      | Authentication token                        | Require json body                      |
 | POST   | Add product          | api/products   | Created product                             | Require authentication key & json body |
 | GET    | Show all products    | api/products   | All products                                | Requires nothing                       |
 | GET    | Get specific product | api/products/1 | Returns product of id 1 (if exists)         | Requires nothing                       |
@@ -17,13 +17,12 @@ It's a simple API request/response `CRUD` application made with Laravel.
 | DELETE | Delete product       | api/products/1 | Delete product of id 1 (if exists)          | Require authentication key             |
 | POST   | Logout               | api/logout     | Logout of the system                        | Require authentication key             |
 
-## Learning Laravel
+## Accepted/Required json keys
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Registration:** `name`, `email`, `password`, `password_confirmation`<br>
+**Login:** `email`, `password` <br>
+**Add products:** `name`, `slug`, `description`, `price` <br>
+**Update products:** `name`, `description`, `price` [Note: not all the field is required here]<br>
 
 ## Laravel Sponsors
 
