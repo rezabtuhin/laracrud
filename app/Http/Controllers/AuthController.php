@@ -18,12 +18,9 @@ class AuthController extends Controller
         ]);
         $fields['password'] = bcrypt($fields['password']);
         $user = User::create($fields);
-        $token = $user->createToken('laracrud')->plainTextToken;
-        $response = [
-            'user' => $user,
-            'token' => $token,
-        ];
-        return response($response, 201);
+        return response([
+            "message" => "Account created successfully. Please login to your account."
+        ], 201);
     }
 
     public function login(Request $request)
