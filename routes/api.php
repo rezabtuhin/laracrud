@@ -20,6 +20,8 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::get('/error', [AuthController::class, 'error'])->name('error');
+
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('/products', [ProductController::class, 'store']);

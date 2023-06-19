@@ -53,4 +53,11 @@ class AuthController extends Controller
             'message' => 'Logged out'
         ];
     }
+
+    public function error()
+    {
+        return [
+            "message" => "Please login"
+        ];
+    }
 }
