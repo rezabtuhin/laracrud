@@ -69,6 +69,19 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user = Auth::user();
+        $userId = $user->id;
+
+        if(Product::find($id)->user_id == $userId){
+            Product::destroy($id);
+            return [
+                "message" => "Product deleted successfully"
+            ];
+        }
+        else{
+            return [
+                "message" => "unauthorized access"
+            ];
+        }
     }
 }
