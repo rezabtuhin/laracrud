@@ -70,4 +70,6 @@ php artisan migrate
 php artisan serve
 ```
 
+Sample config file: [Download](https://drive.google.com/file/d/11YluTbeROaxTn17G0jJ8wUsHiu5DnU2y/view?usp=sharing) here.
+
 <p align="center" style="font-weight: bold">Good luck 😃</p>
