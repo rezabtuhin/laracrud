@@ -31,18 +31,18 @@ class AuthController extends Controller
         ]);
         $user = User::where('email', $fields['email'])->first();
 
-        if (!$user || !Hash::check($fields['password'], $user->password)) {
-            return response([
-                'message' => 'Invalid credentials'
-            ], 401);
+        if ($user && Hash::check($fields['password'], $user->password)) {
+            $token = $user->createToken('laracrud')->plainTextToken;
+            $response = [
+                'user' => $user,
+                'token' => $token,
+            ];
+            return response($response, 201);
         }
 
-        $token = $user->createToken('laracrud')->plainTextToken;
-        $response = [
-            'user' => $user,
-            'token' => $token,
-        ];
-        return response($response, 201);
+        return response([
+            'message' => 'Invalid credentials'
+        ], 401);
     }
 
     public function logout(Request $request)
