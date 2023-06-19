@@ -42,7 +42,7 @@ https://github.com/rezabtuhin/laracrud.git
 
 ### Step 2: Navigate to the project directory in your desktop.
 
-### step 3: Open terminal and run these commands (Requires all command).
+### Step 3: Open terminal and run these commands (Requires all command).
 
 ```sh
 composer install
@@ -56,7 +56,7 @@ npm install
 cp .env.example .env
 ```
 
-Set up the database in the `.env` file. Then run-
+Set up the database in the `.env` file and your `MySQL` server and configurations. Then run-
 
 ```sh
 php artisan key:generate
