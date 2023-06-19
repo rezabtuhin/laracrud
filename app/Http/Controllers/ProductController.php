@@ -38,7 +38,13 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::find($id);
+        if ($product) {
+            return $product;
+        }
+        return [
+            "message" => "Product not found",
+        ];
     }
 
     /**
@@ -46,7 +52,16 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = Auth::user();
+        $userId = $user->id;
+        $product = Product::find($id);
+        if ($product->user_id != $userId) {
+            return [
+                "message" => "Unauthorized access"
+            ];
+        }
+        $product->update($request->all());
+        return $product;
     }
 
     /**
