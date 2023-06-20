@@ -26,9 +26,9 @@ It's a simple API request/response `CRUD` application made with Laravel.
 
 ## Postman configuration
 
-[Download](https://www.postman.com/downloads/) and install the postman desktop application. Create a new collections then create a new global variable `token` for authorization. Initialize the variable with the token from the response of login. Now navigate to the api request window, search for `Authorization` tab; Select type `Bearer Token` and set the `token` in the Token field. **[NOTE: global variable `token` must be reinitialize with new token value from the response of login everytime after logout.]**
+[Download](https://www.postman.com/downloads/) and install the Postman desktop application. Create a new collection then create a new global variable `token` for authorization. Initialize the variable with the token from the response of login. Now navigate to the API request window, search for `Authorization` tab; Select type `Bearer Token` and set the `token` in the Token field. **[NOTE: global variable `token` must be reinitialized with the new token value from the response of login every time after logout.]**
 
--   Set Headers accept `application/json` and use `x-www-form-urlencoded` where needer for the convienience.
+-   Set Headers to accept `application/json` and use `x-www-form-urlencoded` where needed for convenience.
 
 ## Installation
 
@@ -40,9 +40,9 @@ Your machine must have composer, php, xampp, git, node installed.
 https://github.com/rezabtuhin/laracrud.git
 ```
 
-### Step 2: Navigate to the project directory in your desktop.
+### Step 2: Navigate to the project directory on your desktop.
 
-### Step 3: Open terminal and run these commands (Requires all command).
+### Step 3: Open the terminal and run these commands (Requires all commands).
 
 ```sh
 composer install
